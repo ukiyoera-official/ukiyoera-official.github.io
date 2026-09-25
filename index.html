@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="UkiyoEra">
+<meta property="og:description" content="Ukiyo-e samurai and geisha, lost in modern coast life.">
+<meta property="og:image" content="https://ukiyoera-official.github.io/images/samurai-great-wave.jpg">
+<meta property="og:type" content="website">
+<title>UkiyoEra</title>
+<meta name="description" content="Ukiyo-e samurai and geisha, lost in modern coast life. Original art from a Japanese surfer in Miyazaki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Antique&display=swap">
+<style>
+:root{
+  --ground:#E4E8E6;      /* sea mist */
+  --panel:#D7DDD9;
+  --ink:#15223A;         /* bero-ai (Prussian blue) */
+  --ink-soft:#44516A;
+  --karashi:#B8860B;     /* mustard */
+  --wasabi:#6E7F32;
+  --wave:rgba(21,34,58,.10);
+  --line:rgba(21,34,58,.22);
+  --on-accent:#15223A;
+  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  --kanji:"Zen Antique", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0E1829; --panel:#16233A; --ink:#E4E8E6; --ink-soft:#A9B3C2;
+    --karashi:#D9A82B; --wasabi:#9DB24F; --wave:rgba(228,232,230,.07);
+    --line:rgba(228,232,230,.2); --on-accent:#0E1829;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0E1829; --panel:#16233A; --ink:#E4E8E6; --ink-soft:#A9B3C2;
+  --karashi:#D9A82B; --wasabi:#9DB24F; --wave:rgba(228,232,230,.07);
+  --line:rgba(228,232,230,.2); --on-accent:#0E1829;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--karashi);outline-offset:3px}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:20px}
+
+/* seigaiha wave pattern */
+.seigaiha{
+  background-color:var(--panel);
+  background-image:
+    radial-gradient(circle at 100% 150%, var(--panel) 24%, var(--wave) 25%, var(--wave) 28%, var(--panel) 29%, var(--panel) 36%, var(--wave) 37%, var(--wave) 40%, transparent 41%),
+    radial-gradient(circle at 0 150%, var(--panel) 24%, var(--wave) 25%, var(--wave) 28%, var(--panel) 29%, var(--panel) 36%, var(--wave) 37%, var(--wave) 40%, transparent 41%),
+    radial-gradient(circle at 50% 100%, var(--panel) 10%, var(--wave) 11%, var(--wave) 23%, var(--panel) 24%, var(--panel) 30%, var(--wave) 31%, var(--wave) 43%, var(--panel) 44%, var(--panel) 50%, var(--wave) 51%, var(--wave) 63%, transparent 64%);
+  background-size:56px 28px;
+}
+
+/* nav */
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
+.brand span{font-family:var(--kanji);font-size:1rem;color:var(--ink-soft)}
+nav.links{display:flex;gap:18px;flex-wrap:wrap;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+nav.links a{text-decoration:none;color:var(--ink-soft)}
+nav.links a:hover{color:var(--ink)}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding-block:64px 48px}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 14px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,7.5vw,5.6rem);line-height:.95;letter-spacing:-.035em;margin:0;text-wrap:balance;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--karashi)}
+.hero p.lede{max-width:46ch;margin:24px 0 0;color:var(--ink-soft);font-size:1.05rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 20px;border:2px solid var(--ink);text-decoration:none;font-weight:700;font-size:.92rem;letter-spacing:.02em}
+.btn.primary{background:var(--karashi);border-color:var(--karashi);color:var(--on-accent)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.hero-art{margin:0;width:min(340px,100%)}
+.hero-art img{display:block;width:100%;height:auto;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--karashi)}
+.hero-art figcaption{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
+.vert{writing-mode:vertical-rl;font-family:var(--kanji);font-size:clamp(2.4rem,6vw,4.2rem);line-height:1;letter-spacing:.12em;color:var(--ink);border-left:2px solid var(--ink);padding-left:14px;margin:0}
+.vert small{font-size:.32em;letter-spacing:.3em;color:var(--ink-soft);margin-top:.8em}
+.band{height:84px;border-block:2px solid var(--ink)}
+
+/* sections */
+section.block{padding-block:72px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:32px}
+.sec-head h2{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;line-height:1.05;margin:0}
+.sec-head .jp{font-family:var(--kanji);font-size:1.1rem;color:var(--ink-soft)}
+
+/* characters */
+.cast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.char{border:2px solid var(--ink);display:grid;grid-template-rows:auto 1fr}
+.char .portrait{aspect-ratio:4/3;max-width:100%;display:grid;place-items:center;border-bottom:2px solid var(--ink);position:relative}
+.char .portrait .seal{font-family:var(--kanji);font-size:2.8rem;line-height:1.1;writing-mode:vertical-rl;padding:.35em .3em;letter-spacing:.08em;color:var(--ground);background:var(--c)}
+.char .body{padding:20px 22px 24px}
+.char h3{font-family:var(--display);font-weight:800;font-size:1.7rem;margin:0;line-height:1.1}
+.char .role{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c);font-weight:700;margin:4px 0 12px}
+.char p{margin:0;color:var(--ink-soft)}
+.w{--c:var(--wasabi)} .k{--c:var(--karashi)}
+
+/* designs */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.item{text-decoration:none;display:flex;flex-direction:column;gap:10px}
+.grid{align-items:start}
+.item.p .img{aspect-ratio:707/1000}
+.item .img{aspect-ratio:1/1;max-width:100%;border:2px solid var(--ink);display:grid;place-items:center;overflow:hidden}
+.item .img img{width:100%;height:100%;object-fit:cover;display:block}
+.item .img .ph{font-family:var(--kanji);font-size:2.4rem;color:var(--ink-soft)}
+.item:hover .img{box-shadow:5px 5px 0 var(--karashi)}
+.item .meta{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.item h3{font-family:var(--display);font-weight:500;font-size:1.08rem;margin:0;line-height:1.25}
+.item .tag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+.grid-note{margin:28px 0 0;color:var(--ink-soft);font-size:.9rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:40px;align-items:start}
+.about h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.about .copy p{margin:0 0 1.1em;max-width:62ch}
+.about .copy p:last-child{font-weight:700;color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* footer */
+footer{border-top:2px solid var(--ink);padding-block:40px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .links{display:flex;gap:12px;flex-wrap:wrap}
+footer small{color:var(--ink-soft)}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:40px 32px}
+  .hero-art{margin:0;width:min(340px,100%)}
+.hero-art img{display:block;width:100%;height:auto;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--karashi)}
+.hero-art figcaption{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
+.vert{display:none}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .cast,.about{grid-template-columns:1fr}
+  nav.links{display:none}
+  section.block{padding-block:52px}
+}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>UkiyoEra</b><span>浮世時代</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#cast">Characters</a>
+      <a href="#designs">Designs</a>
+      <a href="#about">About</a>
+      <a href="https://www.etsy.com/shop/UkiyoEraOnlineshop">Shop</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Ukiyo-e art · Miyazaki, Japan</p>
+        <h1>Two hundred years late for <em>the beach</em></h1>
+        <p class="lede">Samurai and geisha who wandered out of the Edo period and into beach towns, skate parks, and late-night bars. They seem fine with it.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://www.etsy.com/shop/UkiyoEraOnlineshop">Shop on Etsy</a>
+          <a class="btn" href="https://www.instagram.com/ukiyoera.official/">@ukiyoera.official</a>
+        </div>
+      </div>
+      <figure class="hero-art"><img src="images/samurai-great-wave.jpg" width="707" height="1000" alt="Ukiyo-e print of a samurai in full armor surfing inside a giant wave"><figcaption>浮世時代 · Samurai Great Wave</figcaption></figure>
+    </div>
+    <div class="band seigaiha" role="presentation"></div>
+  </section>
+
+  <section class="block" id="cast">
+    <div class="wrap">
+      <div class="sec-head"><h2>The regulars</h2><span class="jp">登場人物</span></div>
+      <div class="cast">
+        <article class="char w">
+          <div class="portrait seigaiha"><span class="seal" aria-hidden="true">山葵</span></div>
+          <div class="body">
+            <h3>Wasabi</h3>
+            <p class="role">Samurai · full armor, always</p>
+            <p>Gold crescent helmet, dark bronze armor, gold face guard. He has never taken any of it off. Not for surfing, not for camping, not for the ukulele.</p>
+          </div>
+        </article>
+        <article class="char k">
+          <div class="portrait seigaiha"><span class="seal" aria-hidden="true">芥子</span></div>
+          <div class="body">
+            <h3>Karashi</h3>
+            <p class="role">Geisha · has her own plans</p>
+            <p>Black shimada hair with a red kanzashi, indigo kimono with orange peonies, mustard obi. She found the beach bar before he found the beach.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="designs" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><h2>Nine prints</h2><span class="jp">作品</span></div>
+      <div class="grid">
+        <a class="item p" href="https://www.etsy.com/listing/4528386623"><div class="img"><img src="images/samurai-great-wave.jpg" alt="A samurai surfing inside a giant wave" loading="lazy" width="707" height="1000"></div><div class="meta"><h3>Samurai Great Wave</h3><span class="tag">Samurai</span></div></a>
+        <a class="item p" href="https://www.etsy.com/listing/4528384128"><div class="img"><img src="images/samurai-camping.jpg" alt="A samurai in armor by a campfire at sunset" loading="lazy" width="707" height="1000"></div><div class="meta"><h3>Samurai Camping</h3><span class="tag">Samurai</span></div></a>
+        <a class="item p" href="https://www.etsy.com/listing/4528418193"><div class="img"><img src="images/samurai-skate.jpg" alt="A samurai skateboarding under cherry blossoms" loading="lazy" width="707" height="1000"></div><div class="meta"><h3>Samurai Skate</h3><span class="tag">Samurai</span></div></a>
+        <a class="item s" href="https://www.etsy.com/listing/4528386069"><div class="img"><img src="images/samurai-go-surf.jpg" alt="A samurai with his horse and surfboard on the beach" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Samurai Go Surf</h3><span class="tag">Samurai</span></div></a>
+        <a class="item s" href="https://www.etsy.com/listing/4528386359"><div class="img"><img src="images/ukulele-samurai.jpg" alt="A samurai playing ukulele by the sea" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Ukulele Samurai</h3><span class="tag">Samurai</span></div></a>
+        <a class="item s" href="https://www.etsy.com/listing/4532444568"><div class="img"><img src="images/geisha-surfer.jpg" alt="A geisha carrying a surfboard by the waves" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Surfer</h3><span class="tag">Geisha</span></div></a>
+        <a class="item s" href="https://www.etsy.com/listing/4532434225"><div class="img"><img src="images/geisha-ukulele.jpg" alt="A geisha playing ukulele at sunset with Mount Fuji" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Ukulele</h3><span class="tag">Geisha</span></div></a>
+        <a class="item s" href="https://www.etsy.com/listing/4537654018"><div class="img"><img src="images/geisha-skater.jpg" alt="A geisha skateboarding through cherry blossoms" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Skater</h3><span class="tag">Geisha</span></div></a>
+        <a class="item s" href="https://www.etsy.com/listing/4537654944"><div class="img"><img src="images/geisha-beach-bar.jpg" alt="A geisha with a cocktail at a beach bar under a full moon" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Beach Bar</h3><span class="tag">Geisha</span></div></a>
+      </div>
+      <p class="grid-note">Tees from $28 with free shipping in the US. Posters, totes and mugs coming soon.</p>
+    </div>
+  </section>
+
+  <section class="block seigaiha" id="about">
+    <div class="wrap about">
+      <h2>What would a samurai do on his day off?</h2>
+      <div class="copy">
+        <p>I'm a Japanese artist living in Miyazaki, a surf town on the southern coast of Japan. I grew up in Kyoto, surrounded by temples and old woodblock prints, and I spend my mornings in the ocean.</p>
+        <p>Apparently he goes surfing. He also camps, skateboards badly, and learned the ukulele. The geisha has her own plans: a cocktail at the beach bar, a skateboard, a sunset.</p>
+        <p>Every design is drawn in the style of Edo-period ukiyo-e, then dropped into modern coast life without explanation. Nobody in the pictures finds this strange. Each piece is printed on demand, so nothing is overproduced.</p>
+        <p>The samurai is probably still in the water.</p>
+        <div class="facts"><span>Miyazaki, Japan</span><span>Printed on demand</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><b>UkiyoEra</b><span>浮世時代</span></a>
+    <div class="links">
+      <a class="btn primary" href="https://www.etsy.com/shop/UkiyoEraOnlineshop">Etsy shop</a>
+      <a class="btn" href="https://www.instagram.com/ukiyoera.official/">Instagram</a>
+    </div>
+    <small>© 2026 UkiyoEra</small>
+  </div>
+</footer>
+</body>
+</html>
