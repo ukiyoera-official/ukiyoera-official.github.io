@@ -1,0 +1,11 @@
+[
+  {"name": "Samurai Surfing Giant Wave", "character": "samurai", "type": "Unisex T-shirt", "image": "images/samurai-great-wave.jpg", "shape": "tall", "etsy": "https://www.etsy.com/listing/4528386623", "note": "A samurai drops into the Great Wave. Armor stays on."},
+  {"name": "Samurai Camping at Sunset", "character": "samurai", "type": "Unisex T-shirt", "image": "images/samurai-camping.jpg", "shape": "tall", "etsy": "https://www.etsy.com/listing/4528384128", "note": "Folding chair, fishing rod, campfire, full armor."},
+  {"name": "Samurai Skate", "character": "samurai", "type": "Unisex T-shirt", "image": "images/samurai-skate.jpg", "shape": "tall", "etsy": "https://www.etsy.com/listing/4528418193", "note": "Under the cherry blossoms, on a skateboard, badly."},
+  {"name": "Samurai Go Surf", "character": "samurai", "type": "Unisex T-shirt", "image": "images/samurai-go-surf.jpg", "shape": "square", "etsy": "https://www.etsy.com/listing/4528386069", "note": "His horse is labeled SUV. He is not upgrading."},
+  {"name": "Ukulele Samurai", "character": "samurai", "type": "Unisex T-shirt", "image": "images/ukulele-samurai.jpg", "shape": "square", "etsy": "https://www.etsy.com/listing/4528386359", "note": "He learned three chords and plays them seriously."},
+  {"name": "Geisha Surfer", "character": "geisha", "type": "Unisex T-shirt", "image": "images/geisha-surfer.jpg", "shape": "square", "etsy": "https://www.etsy.com/listing/4532444568", "note": "Longboard under one arm, the Great Wave behind her."},
+  {"name": "Geisha Playing Ukulele at Sunset", "character": "geisha", "type": "Unisex T-shirt", "image": "images/geisha-ukulele.jpg", "shape": "square", "etsy": "https://www.etsy.com/listing/4532434225", "note": "Mount Fuji at sunset, a ukulele, no audience needed."},
+  {"name": "Geisha Skater in Sakura", "character": "geisha", "type": "Unisex T-shirt", "image": "images/geisha-skater.jpg", "shape": "square", "etsy": "https://www.etsy.com/listing/4537654018", "note": "Cherry blossom season, taken at speed."},
+  {"name": "Geisha Chill", "character": "geisha", "type": "Unisex T-shirt", "image": "images/geisha-beach-bar.jpg", "shape": "square", "etsy": "https://www.etsy.com/listing/4537654944", "note": "Full moon, beach bar, one cocktail. She found it first."}
+]

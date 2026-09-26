@@ -7,8 +7,8 @@
 <meta property="og:description" content="Ukiyo-e samurai and geisha, lost in modern coast life.">
 <meta property="og:image" content="https://ukiyoera-official.github.io/images/samurai-great-wave.jpg">
 <meta property="og:type" content="website">
-<title>UkiyoEra</title>
-<meta name="description" content="Ukiyo-e samurai and geisha, lost in modern coast life. Original art from a Japanese surfer.">
+<title>Shop · UkiyoEra</title>
+<meta name="description" content="Ukiyo-e samurai and geisha tees and prints. Every piece links to our Etsy shop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Antique&display=swap">
@@ -144,97 +144,142 @@ footer small{color:var(--ink-soft)}
 }
 @media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
 </style>
+
+<style>
+.shop-hero{padding-block:48px 8px}
+.shop-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,6vw,4rem);line-height:1;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.shop-hero p{max-width:56ch;color:var(--ink-soft);margin:16px 0 0}
+.facts-row{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 24px}
+.filters button{font:inherit;font-size:.85rem;font-weight:700;padding:8px 16px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px;align-items:start}
+.product{display:flex;flex-direction:column;gap:10px}
+.product .pimg{display:block;border:2px solid var(--ink);aspect-ratio:1/1;overflow:hidden;background:var(--panel)}
+.product.tall .pimg{aspect-ratio:707/1000}
+.product .pimg img{width:100%;height:100%;object-fit:cover;display:block}
+.product .pimg:hover{box-shadow:5px 5px 0 var(--karashi)}
+.product h2{font-family:var(--display);font-weight:800;font-size:1.15rem;line-height:1.2;margin:0}
+.product .ptype{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.product p{margin:0;color:var(--ink-soft);font-size:.92rem}
+.product .btn{align-self:flex-start;margin-top:4px}
+.soon{margin-top:56px;border-top:2px solid var(--ink);padding-top:20px;color:var(--ink-soft)}
+.soon b{color:var(--ink)}
+@media (max-width:760px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}}
+@media (max-width:420px){.products{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><b>UkiyoEra</b><span>浮世時代</span></a>
+    <a class="brand" href="./"><b>UkiyoEra</b><span>浮世時代</span></a>
     <nav class="links" aria-label="Sections">
-      <a href="#cast">Characters</a>
-      <a href="#designs">Designs</a>
-      <a href="#about">About</a>
+      <a href="./#cast">Characters</a>
+      <a href="./#designs">Designs</a>
+      <a href="./#about">About</a>
       <a href="shop.html">Shop</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero">
+<main>
+  <section class="shop-hero">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Ukiyo-e art · From Kyoto, Japan</p>
-        <h1>Two hundred years late for <em>the beach</em></h1>
-        <p class="lede">Samurai and geisha who wandered out of the Edo period and into beach towns, skate parks, and late-night bars. They seem fine with it.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="shop.html">Shop the prints</a>
-          <a class="btn" href="https://www.instagram.com/ukiyoera.official/">@ukiyoera.official</a>
-        </div>
-      </div>
-      <figure class="hero-art"><img src="images/samurai-great-wave.jpg" width="707" height="1000" alt="Ukiyo-e print of a samurai in full armor surfing inside a giant wave"><figcaption>浮世時代 · Samurai Great Wave</figcaption></figure>
-    </div>
-    <div class="band seigaiha" role="presentation"></div>
-  </section>
-
-  <section class="block" id="cast">
-    <div class="wrap">
-      <div class="sec-head"><h2>The regulars</h2><span class="jp">登場人物</span></div>
-      <div class="cast">
-        <article class="char w">
-          <div class="portrait"><img src="images/wasabi.webp" width="1000" height="750" alt="Wasabi, the samurai, shown from the front, side and back"></div>
-          <div class="body">
-            <h3>Wasabi</h3>
-            <p class="role">Samurai · full armor, always</p>
-            <p>Gold crescent helmet, black-and-gold armor, a face guard that never smiles. He has never taken any of it off. Not for surfing, not for camping, not for the ukulele.</p>
-          </div>
-        </article>
-        <article class="char k">
-          <div class="portrait"><img src="images/karashi.webp" width="1000" height="750" alt="Karashi, the geisha, shown from three angles"></div>
-          <div class="body">
-            <h3>Karashi</h3>
-            <p class="role">Geisha · has her own plans</p>
-            <p>Black shimada hair with a red kanzashi, indigo kimono with orange peonies, mustard obi. She found the beach bar before he found the beach.</p>
-          </div>
-        </article>
-      </div>
+      <p class="eyebrow">Shop · 9 designs</p>
+      <h1>Wear the samurai. Or the geisha.</h1>
+      <p>Every design is printed on demand and sold through our Etsy shop. Tap any piece to see sizes, colors and the current price.</p>
+      <div class="facts-row"><span>Free shipping in the US</span><span>Sizes S to 3XL</span><span>Ships worldwide</span></div>
     </div>
   </section>
-
-  <section class="block" id="designs" style="padding-top:0">
+  <section>
     <div class="wrap">
-      <div class="sec-head"><h2>Nine prints</h2><span class="jp">作品</span></div>
-      <div class="grid">
-        <a class="item p" href="https://www.etsy.com/listing/4528386623"><div class="img"><img src="images/samurai-great-wave.jpg" alt="A samurai surfing inside a giant wave" loading="lazy" width="707" height="1000"></div><div class="meta"><h3>Samurai Great Wave</h3><span class="tag">Samurai</span></div></a>
-        <a class="item p" href="https://www.etsy.com/listing/4528384128"><div class="img"><img src="images/samurai-camping.jpg" alt="A samurai in armor by a campfire at sunset" loading="lazy" width="707" height="1000"></div><div class="meta"><h3>Samurai Camping</h3><span class="tag">Samurai</span></div></a>
-        <a class="item p" href="https://www.etsy.com/listing/4528418193"><div class="img"><img src="images/samurai-skate.jpg" alt="A samurai skateboarding under cherry blossoms" loading="lazy" width="707" height="1000"></div><div class="meta"><h3>Samurai Skate</h3><span class="tag">Samurai</span></div></a>
-        <a class="item s" href="https://www.etsy.com/listing/4528386069"><div class="img"><img src="images/samurai-go-surf.jpg" alt="A samurai with his horse and surfboard on the beach" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Samurai Go Surf</h3><span class="tag">Samurai</span></div></a>
-        <a class="item s" href="https://www.etsy.com/listing/4528386359"><div class="img"><img src="images/ukulele-samurai.jpg" alt="A samurai playing ukulele by the sea" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Ukulele Samurai</h3><span class="tag">Samurai</span></div></a>
-        <a class="item s" href="https://www.etsy.com/listing/4532444568"><div class="img"><img src="images/geisha-surfer.jpg" alt="A geisha carrying a surfboard by the waves" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Surfer</h3><span class="tag">Geisha</span></div></a>
-        <a class="item s" href="https://www.etsy.com/listing/4532434225"><div class="img"><img src="images/geisha-ukulele.jpg" alt="A geisha playing ukulele at sunset with Mount Fuji" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Ukulele</h3><span class="tag">Geisha</span></div></a>
-        <a class="item s" href="https://www.etsy.com/listing/4537654018"><div class="img"><img src="images/geisha-skater.jpg" alt="A geisha skateboarding through cherry blossoms" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Skater</h3><span class="tag">Geisha</span></div></a>
-        <a class="item s" href="https://www.etsy.com/listing/4537654944"><div class="img"><img src="images/geisha-beach-bar.jpg" alt="A geisha with a cocktail at a beach bar under a full moon" loading="lazy" width="1000" height="1000"></div><div class="meta"><h3>Geisha Beach Bar</h3><span class="tag">Geisha</span></div></a>
+      <div class="filters" role="group" aria-label="Filter designs">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="samurai" aria-pressed="false">Samurai</button>
+        <button type="button" data-filter="geisha" aria-pressed="false">Geisha</button>
       </div>
-      <p class="grid-note">Tees from $28 with free shipping in the US. Posters, totes and mugs coming soon.</p>
-      <div class="cta-row"><a class="btn primary" href="shop.html">Go to the shop</a></div>
-    </div>
-  </section>
-
-  <section class="block seigaiha" id="about">
-    <div class="wrap about">
-      <h2>What would a samurai do on his day off?</h2>
-      <div class="copy">
-        <p>I'm a Japanese artist living in a surf town on the coast of Japan. I grew up in Kyoto, surrounded by temples and old woodblock prints, and I spend my mornings in the ocean.</p>
-        <p>Apparently he goes surfing. He also camps, skateboards badly, and learned the ukulele. The geisha has her own plans: a cocktail at the beach bar, a skateboard, a sunset.</p>
-        <p>Every design is drawn in the style of Edo-period ukiyo-e, then dropped into modern coast life without explanation. Nobody in the pictures finds this strange. Each piece is printed on demand, so nothing is overproduced.</p>
-        <p>The samurai is probably still in the water.</p>
-        <div class="facts"><span>From Kyoto, Japan</span><span>Printed on demand</span></div>
+      <div class="products">
+      <article class="product tall" data-character="samurai">
+        <a class="pimg" href="https://www.etsy.com/listing/4528386623"><img src="images/samurai-great-wave.jpg" alt="Samurai Surfing Giant Wave design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Samurai</span>
+        <h2>Samurai Surfing Giant Wave</h2>
+        <p>A samurai drops into the Great Wave. Armor stays on.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4528386623">Buy on Etsy</a>
+      </article>
+      <article class="product tall" data-character="samurai">
+        <a class="pimg" href="https://www.etsy.com/listing/4528384128"><img src="images/samurai-camping.jpg" alt="Samurai Camping at Sunset design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Samurai</span>
+        <h2>Samurai Camping at Sunset</h2>
+        <p>Folding chair, fishing rod, campfire, full armor.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4528384128">Buy on Etsy</a>
+      </article>
+      <article class="product tall" data-character="samurai">
+        <a class="pimg" href="https://www.etsy.com/listing/4528418193"><img src="images/samurai-skate.jpg" alt="Samurai Skate design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Samurai</span>
+        <h2>Samurai Skate</h2>
+        <p>Under the cherry blossoms, on a skateboard, badly.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4528418193">Buy on Etsy</a>
+      </article>
+      <article class="product square" data-character="samurai">
+        <a class="pimg" href="https://www.etsy.com/listing/4528386069"><img src="images/samurai-go-surf.jpg" alt="Samurai Go Surf design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Samurai</span>
+        <h2>Samurai Go Surf</h2>
+        <p>His horse is labeled SUV. He is not upgrading.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4528386069">Buy on Etsy</a>
+      </article>
+      <article class="product square" data-character="samurai">
+        <a class="pimg" href="https://www.etsy.com/listing/4528386359"><img src="images/ukulele-samurai.jpg" alt="Ukulele Samurai design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Samurai</span>
+        <h2>Ukulele Samurai</h2>
+        <p>He learned three chords and plays them seriously.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4528386359">Buy on Etsy</a>
+      </article>
+      <article class="product square" data-character="geisha">
+        <a class="pimg" href="https://www.etsy.com/listing/4532444568"><img src="images/geisha-surfer.jpg" alt="Geisha Surfer design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Geisha</span>
+        <h2>Geisha Surfer</h2>
+        <p>Longboard under one arm, the Great Wave behind her.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4532444568">Buy on Etsy</a>
+      </article>
+      <article class="product square" data-character="geisha">
+        <a class="pimg" href="https://www.etsy.com/listing/4532434225"><img src="images/geisha-ukulele.jpg" alt="Geisha Playing Ukulele at Sunset design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Geisha</span>
+        <h2>Geisha Playing Ukulele at Sunset</h2>
+        <p>Mount Fuji at sunset, a ukulele, no audience needed.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4532434225">Buy on Etsy</a>
+      </article>
+      <article class="product square" data-character="geisha">
+        <a class="pimg" href="https://www.etsy.com/listing/4537654018"><img src="images/geisha-skater.jpg" alt="Geisha Skater in Sakura design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Geisha</span>
+        <h2>Geisha Skater in Sakura</h2>
+        <p>Cherry blossom season, taken at speed.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4537654018">Buy on Etsy</a>
+      </article>
+      <article class="product square" data-character="geisha">
+        <a class="pimg" href="https://www.etsy.com/listing/4537654944"><img src="images/geisha-beach-bar.jpg" alt="Geisha Chill design" loading="lazy"></a>
+        <span class="ptype">Unisex T-shirt · Geisha</span>
+        <h2>Geisha Chill</h2>
+        <p>Full moon, beach bar, one cocktail. She found it first.</p>
+        <a class="btn primary" href="https://www.etsy.com/listing/4537654944">Buy on Etsy</a>
+      </article>
       </div>
+      <p class="soon"><b>Coming soon:</b> posters, totes and mugs of the same prints. New pieces show up here as soon as they are listed on Etsy.</p>
     </div>
   </section>
 </main>
+<script>
+document.querySelectorAll('.filters button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = b.dataset.filter;
+    document.querySelectorAll('.filters button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    document.querySelectorAll('.product').forEach(function (p) { p.hidden = f !== 'all' && p.dataset.character !== f; });
+  });
+});
+</script>
 
 <footer>
   <div class="wrap">
-    <a class="brand" href="#top"><b>UkiyoEra</b><span>浮世時代</span></a>
+    <a class="brand" href="./"><b>UkiyoEra</b><span>浮世時代</span></a>
     <div class="links">
       <a class="btn primary" href="https://www.etsy.com/shop/UkiyoEraOnlineshop">Etsy shop</a>
       <a class="btn" href="https://www.instagram.com/ukiyoera.official/">Instagram</a>
