@@ -94,7 +94,9 @@ section.block{padding-block:72px}
 .cast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .char{border:2px solid var(--ink);display:grid;grid-template-rows:auto 1fr}
 .char .portrait{aspect-ratio:4/3;max-width:100%;display:grid;place-items:center;border-bottom:2px solid var(--ink);position:relative}
-.char .portrait .seal{font-family:var(--kanji);font-size:2.8rem;line-height:1.1;writing-mode:vertical-rl;padding:.35em .3em;letter-spacing:.08em;color:var(--ground);background:var(--c)}
+.char .portrait{background:#fff}
+.char .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.char .portrait .seal{position:absolute;top:12px;right:12px;font-family:var(--kanji);font-size:1.3rem;line-height:1.1;writing-mode:vertical-rl;padding:.35em .25em;letter-spacing:.08em;color:#fff;background:var(--c)}
 .char .body{padding:20px 22px 24px}
 .char h3{font-family:var(--display);font-weight:800;font-size:1.7rem;margin:0;line-height:1.1}
 .char .role{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c);font-weight:700;margin:4px 0 12px}
@@ -177,15 +179,15 @@ footer small{color:var(--ink-soft)}
       <div class="sec-head"><h2>The regulars</h2><span class="jp">登場人物</span></div>
       <div class="cast">
         <article class="char w">
-          <div class="portrait seigaiha"><span class="seal" aria-hidden="true">山葵</span></div>
+          <div class="portrait"><img src="images/wasabi.webp" width="1000" height="750" alt="Wasabi, the samurai, shown from the front, side and back"></div>
           <div class="body">
             <h3>Wasabi</h3>
             <p class="role">Samurai · full armor, always</p>
-            <p>Gold crescent helmet, dark bronze armor, gold face guard. He has never taken any of it off. Not for surfing, not for camping, not for the ukulele.</p>
+            <p>Gold crescent helmet, black-and-gold armor, a face guard that never smiles. He has never taken any of it off. Not for surfing, not for camping, not for the ukulele.</p>
           </div>
         </article>
         <article class="char k">
-          <div class="portrait seigaiha"><span class="seal" aria-hidden="true">芥子</span></div>
+          <div class="portrait"><img src="images/karashi.webp" width="1000" height="750" alt="Karashi, the geisha, shown from three angles"></div>
           <div class="body">
             <h3>Karashi</h3>
             <p class="role">Geisha · has her own plans</p>
