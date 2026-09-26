@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ukiyoera-official.github.io/sitemap.xml
